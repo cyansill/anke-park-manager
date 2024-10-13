@@ -3,6 +3,9 @@
     userHome(
       v-if="pg_type == 1"
     )
+    adminHome(
+      v-else-if="pg_type == 2"
+    )
 </template>
 
 <script lang="ts" setup>
@@ -12,6 +15,7 @@ import {
 } from 'vue'
 
 import userHome from './components/user-home.vue'
+import adminHome from './components/admin-home.vue'
 
 import { useAuthorizationStore } from '@/stores/authorization';
 

@@ -18,10 +18,20 @@
           )
       div(class="quick-start-panel")
         div(
-          v-for="item in 16"
+          v-for="item in 4"
           class="quick-start-item"
         )
+          el-card(class="quick-card")
+            template(#header)
+              div card head
+            div(class="card-body")
+              div card body
+              div(class="card-footer") 
+                el-button(type="primary" size="small") 查看详细
       div(class="gap")
+      div(class="footer")
+        hr
+        div powered by vue3 + ts + element-plus
 </template>
 
 <script lang="ts" setup></script>
@@ -90,8 +100,9 @@ main {
   margin-top: 50px;
   margin-inline: 10vw;
   background-color: #CCCCCC;
-  height: auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
+  height: max-content;
+  // min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -135,9 +146,56 @@ main {
   gap: 10px;
 
   .quick-start-item {
-    background: #464E47;
-    min-height: 95px;
-    flex: 1 0 24%;
+    background: transparent;
+    min-height: 185px;
+    flex: 1 0 49%;
+
+    .quick-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      :nth-child(2) {
+        flex: 1;
+      }
+
+      .card-body {
+        height: 100%;
+        flex: 1;
+        display: grid;
+        grid-template-columns: auto 80px;
+        grid-template-rows: auto auto;
+
+        .card-footer {
+          grid-column: 2;
+          grid-row: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+
+  hr {
+    margin-bottom: 0.8rem;
+    width: 60%;
+  }
+
+  div {
+    color: #464E47;
+    font-size: 0.8rem;
   }
 }
 
@@ -184,6 +242,22 @@ main {
   .quick-start-panel {
     .quick-start-item {
       flex: 1 0 48%;
+      min-height: 105px;
+
+      .quick-card {
+
+        .card-body {
+          .card-footer {
+            display: none;
+
+            >* {
+              display: none;
+            }
+          }
+        }
+      }
+
+
     }
   }
 }

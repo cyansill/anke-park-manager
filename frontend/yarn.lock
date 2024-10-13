@@ -10,6 +10,14 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@antfu/install-pkg@^0.4.0", "@antfu/install-pkg@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.npmmirror.com/@antfu/install-pkg/-/install-pkg-0.4.1.tgz"
+  integrity sha512-T7yB5QNG29afhWVkVq7XeIMBa5U/vs9mX69YqayXypPRmYzUmzwnYltplHmPtZ4HPCn+sQKeXW8I47wCbuBOjw==
+  dependencies:
+    package-manager-detector "^0.2.0"
+    tinyexec "^0.3.0"
+
 "@antfu/utils@^0.7.10":
   version "0.7.10"
   resolved "https://registry.npmmirror.com/@antfu/utils/-/utils-0.7.10.tgz"
@@ -388,6 +396,24 @@
   version "2.0.3"
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
+
+"@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/utils@^2.1.29":
+  version "2.1.33"
+  resolved "https://registry.npmmirror.com/@iconify/utils/-/utils-2.1.33.tgz"
+  integrity sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==
+  dependencies:
+    "@antfu/install-pkg" "^0.4.0"
+    "@antfu/utils" "^0.7.10"
+    "@iconify/types" "^2.0.0"
+    debug "^4.3.6"
+    kolorist "^1.8.0"
+    local-pkg "^0.5.0"
+    mlly "^1.7.1"
 
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
@@ -859,7 +885,7 @@
     "@vue/compiler-core" "3.5.11"
     "@vue/shared" "3.5.11"
 
-"@vue/compiler-sfc@^3.5.3", "@vue/compiler-sfc@3.5.11":
+"@vue/compiler-sfc@^3.0.2 || ^2.7.0", "@vue/compiler-sfc@^3.5.3", "@vue/compiler-sfc@3.5.11":
   version "3.5.11"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.11.tgz"
   integrity sha512-gsbBtT4N9ANXXepprle+X9YLg2htQk1sqH/qGJ/EApl+dgpUBdTv3yP7YlR535uHZY3n6XaR0/bKo0BgwwDniw==
@@ -2918,6 +2944,11 @@ knitwork@^1.1.0:
   resolved "https://registry.npmmirror.com/knitwork/-/knitwork-1.1.0.tgz"
   integrity sha512-oHnmiBUVHz1V+URE77PNot2lv3QiYU2zQf1JjOVkMt3YDKGbu8NAFr+c4mcNOhdsGrB/VpVbRwPwhiXrPhxQbw==
 
+kolorist@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.npmmirror.com/kolorist/-/kolorist-1.8.0.tgz"
+  integrity sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==
+
 lazy-ass@^1.6.0, lazy-ass@1.6.0:
   version "1.6.0"
   resolved "https://registry.npmmirror.com/lazy-ass/-/lazy-ass-1.6.0.tgz"
@@ -3369,6 +3400,11 @@ package-json-from-dist@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz"
   integrity sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==
+
+package-manager-detector@^0.2.0:
+  version "0.2.2"
+  resolved "https://registry.npmmirror.com/package-manager-detector/-/package-manager-detector-0.2.2.tgz"
+  integrity sha512-VgXbyrSNsml4eHWIvxxG/nTL4wgybMTXCV2Un/+yEc3aDKKU6nQBZjbeP3Pl3qm9Qg92X/1ng4ffvCeD/zwHgg==
 
 parent-module@^1.0.0:
   version "1.0.1"
@@ -4198,6 +4234,11 @@ tinybench@^2.5.1:
   resolved "https://registry.npmmirror.com/tinybench/-/tinybench-2.9.0.tgz"
   integrity sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==
 
+tinyexec@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmmirror.com/tinyexec/-/tinyexec-0.3.0.tgz"
+  integrity sha512-tVGE0mVJPGb0chKhqmsoosjsS+qUnJVGJpZgsHYQcGoPlG3B51R3PouqTgEGH2Dc9jjFyOqOpix6ZHNMXp1FZg==
+
 tinypool@^0.8.3:
   version "0.8.4"
   resolved "https://registry.npmmirror.com/tinypool/-/tinypool-0.8.4.tgz"
@@ -4369,6 +4410,19 @@ unplugin-auto-import@^0.18.3:
     unimport "^3.12.0"
     unplugin "^1.14.1"
 
+unplugin-icons@^0.19.3:
+  version "0.19.3"
+  resolved "https://registry.npmmirror.com/unplugin-icons/-/unplugin-icons-0.19.3.tgz"
+  integrity sha512-EUegRmsAI6+rrYr0vXjFlIP+lg4fSC4zb62zAZKx8FGXlWAGgEGBCa3JDe27aRAXhistObLPbBPhwa/0jYLFkQ==
+  dependencies:
+    "@antfu/install-pkg" "^0.4.1"
+    "@antfu/utils" "^0.7.10"
+    "@iconify/utils" "^2.1.29"
+    debug "^4.3.6"
+    kolorist "^1.8.0"
+    local-pkg "^0.5.0"
+    unplugin "^1.12.0"
+
 unplugin-vue-components@^0.27.4:
   version "0.27.4"
   resolved "https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.27.4.tgz"
@@ -4385,7 +4439,7 @@ unplugin-vue-components@^0.27.4:
     mlly "^1.7.1"
     unplugin "^1.12.1"
 
-unplugin@^1.12.1, unplugin@^1.14.1, unplugin@^1.3.1:
+unplugin@^1.12.0, unplugin@^1.12.1, unplugin@^1.14.1, unplugin@^1.3.1:
   version "1.14.1"
   resolved "https://registry.npmmirror.com/unplugin/-/unplugin-1.14.1.tgz"
   integrity sha512-lBlHbfSFPToDYp9pjXlUEFVxYLaue9f9T1HC+4OHlmj+HnMDdz9oZY+erXfoCe/5V/7gKUSY2jpXPb9S7f0f/w==

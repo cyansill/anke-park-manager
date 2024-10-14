@@ -4,15 +4,17 @@
       div(class="layout-header")
         el-icon(
           style="margin-left: 10px" 
-          :size="20" 
+          :size="32" 
           @click="sider_hidden = !sider_hidden"
         )
-          ChatSquare
+          Operation
       div(
         class="layout-asider" 
         :class="[sider_hidden ? 'hidden' : '']"
       )
+        div Logo
       div(class="layout-content")
+        div nice to meet u
 </template>
 
 <script lang="ts" setup>
@@ -24,6 +26,21 @@ const sider_hidden = ref(false)
 </script>
 
 <style lang="scss" scoped>
+/* animation */
+@keyframes slideInLeft {
+  0% {}
+  100%{
+    transform: translateX(-256px);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {}
+  100% {
+    
+  }
+}
+
 main {
   background: #FFFFFF;
 }
@@ -45,6 +62,10 @@ main {
 
     &.hidden {
       width: 0;
+
+      >* {
+        
+      }
     }
   }
 

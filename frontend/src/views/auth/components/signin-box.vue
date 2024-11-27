@@ -89,7 +89,7 @@ async function submit(form_ref: FormInstance | undefined) {
   await form_ref.validate((valid) => {
     if (valid) {
       authorization.authorized = true
-      authorization.auth_level = 2
+      authorization.auth_level = 1
       authorization.authorized_actions = 0
       authorization.token = '1234567890'
       authorization_store.update_authorization(authorization)

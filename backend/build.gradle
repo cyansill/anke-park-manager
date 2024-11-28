@@ -12,13 +12,17 @@ group = "org.luna.quickapp"
 version = "1.0"
 description = "Quick App Template"
 
-
 dependencies {
     implementation platform("org.noear:solon-parent:3.0.3")
-    
+
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '4.0.3'
+    implementation group: 'com.baomidou', name: 'mybatis-plus-solon-plugin', version: '3.5.9'
+    implementation("mysql:mysql-connector-java:8.0.32")
+
     implementation("org.noear:solon-web")
     implementation("org.noear:solon-view-freemarker")
     implementation("org.noear:solon-logging-logback")
+    implementation("org.noear:mybatis-plus-solon-plugin")
     implementation("org.codehaus.groovy:groovy:3.0.14")
 
     compileOnly("org.projectlombok:lombok")

@@ -4,9 +4,27 @@ solon.app:
   name: 'demo-app'
   group: 'demo'
 
+solon.dataSources:
+  mdb!:
+    class: "com.zaxxer.hikari.HikariDataSource"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    jdbcUrl: "jdbc:mysql://localhost:3306/anke?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC"
+    username: "root"
+    password: "npgc;_f1T?E."
+
 solon.logging:
   appender:
     console:
       level: INFO
     file:
-      level: INFO
+      level: DEBUG
+
+mybatis.mdb:
+  typeAliases:
+    - "org.luna.quickapp.model.*"
+  mappers:
+    - "org.luna.quickapp.mapper.*"
+  configuration:
+    cacheEnabled: false
+    mapperVerifyEnabled: true
+    mapUnderscoreToCamelCase: true

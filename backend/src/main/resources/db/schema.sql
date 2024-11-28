@@ -37,8 +37,19 @@ CREATE TABLE `profile` (
 
 DROP TABLE IF EXISTS `car`;
 CREATE TABLE `car` (
-  `id` CHAR(36) NOT NULL COMMENT 'UUID'
-);
+  `id` CHAR(36) NOT NULL COMMENT 'UUID',
+  `user_id` CHAR(36) NOT NULL COMMENT 'User Id Link To User Account Table',
+  `province` TINYINT NOT NULL COMMENT 'The Code Of Province Belonged By Car License',
+  `code` CHAR(6) NOT NULL COMMENT 'Base License Code Of Car',
+
+  `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Datetime When Record Inserted',
+  `updated` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Datetime When Record Rewrote',
+  `deleted` TINYINT NOT NULL DEFAULT 0 COMMENT 'Flag Of Logic Deleting: 0-Exists & 1-Deleted',
+
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX (`user_id`) USING HASH,
+  INDEX (`code`) USING HASH
+) ENGINE = 'InnoDB' CHARACTER SET = 'utf8mb4';
 
 -- Tables: address
 DROP TABLE IF EXISTS `address`;
@@ -98,6 +109,7 @@ CREATE TABLE `park_fee_rules` (
   INDEX (`park_id`) USING HASH
 ) ENGINE = 'InnoDB' CHARACTER SET = 'utf8mb4';
 
+-- Tables: order
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
   `id` CHAR(36) NOT NULL COMMENT 'UUID',
@@ -120,3 +132,4 @@ CREATE TABLE `order` (
   INDEX (`park_id`) USING HASH,
   INDEX (`user_id`) USING HASH
 ) ENGINE = 'InnoDB' CHARACTER SET = 'utf8mb4';
+

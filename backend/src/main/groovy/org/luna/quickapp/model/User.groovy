@@ -1,8 +1,8 @@
 package org.luna.quickapp.model
 
-import lombok.Data
+import com.baomidou.mybatisplus.annotation.TableName
 
-@Data
+@TableName("user")
 class User {
 
   private String id
@@ -16,5 +16,14 @@ class User {
   private Date updated
 
   private int deleted
+
+  void removePassword() {
+    password = null
+  }
+
+  @Override
+  String toString() {
+    return "User[id=${id};name=${name}]"
+  }
 
 }

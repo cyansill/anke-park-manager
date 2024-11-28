@@ -1,8 +1,8 @@
-package org.luna.quickapp.model;
+package org.luna.quickapp.model
 
-import lombok.Data;
+import com.baomidou.mybatisplus.annotation.TableName;
 
-@Data
+@TableName("profile")
 class Profile {
 
   private String id

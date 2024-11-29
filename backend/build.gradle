@@ -25,6 +25,7 @@ dependencies {
     implementation("org.noear:solon-view-freemarker")
     implementation("org.noear:solon-logging-logback")
     implementation("org.noear:mybatis-plus-solon-plugin")
+    implementation("org.noear:solon-cache-redisson")
     implementation("org.codehaus.groovy:groovy:3.0.14")
 
     compileOnly("org.projectlombok:lombok")

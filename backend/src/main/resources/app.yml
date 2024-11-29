@@ -28,3 +28,10 @@ mybatis.mdb:
     cacheEnabled: false
     mapperVerifyEnabled: true
     mapUnderscoreToCamelCase: true
+
+redis.ds:
+  config: |
+    singleServerConfig:
+      password: ""
+      address: "redis://localhost:6379"
+      database: 0
